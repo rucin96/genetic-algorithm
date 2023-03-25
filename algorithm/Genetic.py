@@ -1,8 +1,8 @@
 import math
 import random
 from math import sqrt
-from algoritm.Chromosome import Chromosome
-from algoritm.Population import Population
+from algorithm.Chromosome import Chromosome
+from algorithm.Population import Population
 
 
 class Genetic:

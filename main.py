@@ -2,7 +2,7 @@ import random
 import sys
 
 import matplotlib.pyplot as plt
-from algoritm.Genetic import Genetic
+from algorithm.Genetic import Genetic
 
 if __name__ == '__main__':
     points_num = int(sys.argv[1])
@@ -14,8 +14,8 @@ if __name__ == '__main__':
         if nums not in points:
             points.append(nums)
 
-    algoritm = Genetic()
-    solution = algoritm.calc(points, 200)
+    algorithm = Genetic()
+    solution = algorithm.calc(points, 200)
     print(str(solution))
 
     xx = [row[0] for row in solution]

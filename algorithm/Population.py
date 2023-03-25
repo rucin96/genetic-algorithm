@@ -1,4 +1,4 @@
-from algoritm import Chromosome
+from algorithm import Chromosome
 
 
 class Population:
