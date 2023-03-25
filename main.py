@@ -20,6 +20,6 @@ if __name__ == '__main__':
 
     xx = [row[0] for row in solution]
     yy = [row[1] for row in solution]
-    plt.plot(xx, yy, color='red', zorder=0)
-    plt.scatter(xx, yy, marker='o')
+    plt.plot(xx, yy, 'r', zorder=1, lw=3)
+    plt.scatter(xx, yy, marker='.', s=120, zorder=2)
     plt.show()
