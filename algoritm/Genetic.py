@@ -2,7 +2,6 @@ import math
 import random
 from math import sqrt
 from algoritm.Chromosome import Chromosome
-from algoritm.Genome import Genome
 from algoritm.Population import Population
 
 
@@ -56,8 +55,8 @@ class Genetic:
                 j = random.randint(0, size - 1)
                 genoms[i], genoms[j] = genoms[j], genoms[i]
         new_chromosome = Chromosome(size)
-        for genom in genoms:
-            new_chromosome.add(genom)
+        for genome in genoms:
+            new_chromosome.add(genome)
         return new_chromosome
 
     def crossover(self, parent1: Chromosome, parent2: Chromosome) -> Chromosome:
@@ -88,11 +87,7 @@ class Genetic:
             point = points[i]
             if i != 0:
                 distance += math.dist(points[i - 1], point)
-            if point is list:
-                genome = Genome(*point)
-            else:
-                genome = point
-            chromosome.add(genome)
+            chromosome.add(point)
 
         chromosome.set_coefficient(distance)
         return chromosome
